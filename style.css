@@ -1,0 +1,127 @@
+/* Title and Player turn*/
+
+h1 {
+  text-align: center;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  color: transparent;
+  background-image: linear-gradient(to left, rgb(81, 124, 128), rgb(0, 26, 110));
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-shadow: 5px 5px rgb(122, 176, 180);
+ 
+}
+
+h3 {
+  text-align: center;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* game board table */
+
+#game {
+  height: 700px;
+  width: 660px;
+
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  border: 5px solid rgb(81, 124, 128);
+  border-radius: 8px;
+  background-color: rgb(122, 176, 180);
+  box-shadow: 10px 10px rgb(44, 44, 44);
+}
+
+#board td {
+  width: 80px;
+  height: 80px;
+
+  border: solid 5px rgb(81, 124, 128);
+  margin: 5px;
+
+  border-radius: 50%; 
+  background-color: white;
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.piece.p1 {
+  background-color: rgb(182, 73, 73);
+}
+
+.piece.p2 {
+  background-color: rgb(26, 38, 104);
+}
+
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+  border: dashed 1px lightgray;
+  background-color: rgb(30, 68, 62);
+}
+
+#column-top td:hover {
+  background-color: rgb(48, 172, 155);
+ 
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+/* Reset button */
+
+.section {
+  position: relative;
+}
+
+.reset {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: black;
+
+  bottom: 20px;
+  right: 20px;
+
+  width: 70px;
+  height: 25px;
+
+  display: block;
+  margin: 0 auto;
+  line-height: 14pt * 2;
+  padding: 0 20px;
+  background:  #4fac63;
+  letter-spacing: 2px;
+  transition: .1s all ease-in-out;
+  border: 1px solid rgba(0,0,0,1);
+  border-radius: 8px;
+  box-shadow: 3px 3px 1px 1px #051536, 3px 3px 1px 2px rgba(0, 0, 0, 1);
+}
+
+.reset:hover {
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 1);
+}
+
+.reset::selection {
+  background: #ffc8ff;
+  border-bottom: 5px solid #ffc8ff;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.reset:active {
+  transform: scale(0.95);
+  box-shadow:rgb(54, 54, 54);
+}
